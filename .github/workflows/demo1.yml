@@ -3,7 +3,14 @@ on:
   pull_request:
     types:
       - opened
-  workflow_dispatch:    
+  workflow_dispatch:  # ✅ Moved to correct indentation
+  push:
+    branches:
+      - main
+      - 'dev-*'
+    paths-ignore:
+      - '.github/workflows/*'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
