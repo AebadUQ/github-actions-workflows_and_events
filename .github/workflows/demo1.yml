@@ -3,7 +3,7 @@ on:
   pull_request:
     types:
       - opened
-  workflow_dispatch:  # ✅ Moved to correct indentation
+  workflow_dispatch: 
   push:
     branches:
       - main
