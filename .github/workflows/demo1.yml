@@ -4,6 +4,12 @@ on:
     types:
       - opened
   workflow_dispatch:  # ✅ Moved to correct indentation
+  push:
+    branches:
+      - main
+      - 'dev-*'
+    paths-ignore:
+      - '.github/workflows/*'
 
 jobs:
   deploy:
